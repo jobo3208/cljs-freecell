@@ -1,0 +1,122 @@
+body {
+  background: green;
+}
+
+.game {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 140px;
+  padding: 4px;
+  width: 100px;
+}
+
+.cell {
+  border: 1px solid cyan;
+  border-radius: 8px;
+  box-sizing: border-box;
+  float: left;
+  height: 140px;
+  margin-left: 5px;
+  width: 100px;
+}
+
+.cell .card {
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.center-img {
+  float: left;
+  margin-left: 5px;
+}
+
+.foundation {
+  border: 1px solid lime;
+  border-radius: 8px;
+  box-sizing: border-box;
+  float: left;
+  height: 140px;
+  margin-left: 5px;
+  width: 100px;
+}
+
+.foundation .card {
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.separator {
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.stack {
+  float: left;
+  margin-left: 5px;
+  min-height: 140px;
+  min-width: 100px;
+}
+
+.stack .card:not(:first-child) {
+  margin-top: -115px;
+}
+
+.card.red {
+  color: red;
+}
+
+.card.black {
+  color: black;
+}
+
+.active {
+  filter: invert(1);
+}
+
+@keyframes shake {
+  0% { transform: translateX(-5px); }
+  20% { transform: translateX(0px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(0px); }
+  80% { transform: translateX(-2px); }
+  100% { transform: translateX(0px); }
+}
+
+.illegal {
+  animation: shake 0.2s 1;
+}
+
+.glass {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.dialog {
+  background: #dddddd;
+  border: 3px solid #777;
+  border-style: outset;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  height: 200px;
+  left: 50%;
+  padding: 25px;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: 2;
+}
